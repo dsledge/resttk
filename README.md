@@ -49,7 +49,7 @@ func main() {
   //make a resttk router and adding a route to the implementing controller instance
   //first route has no parameters, second route has a paramater that will be place 
   //in a map with the key "name"
-  router := restify.NewRouter()
+  router := resttk.NewRouter()
   router.AddRoute("/api/v1/hello", NewHelloController)
   router.AddRoute("/api/v1/hello/:name", NewHelloController)
 
