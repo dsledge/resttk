@@ -36,7 +36,7 @@ func NewHelloController() resttk.ControllerInterface {
 //implementing the http GET method handler
 func (c *HelloController) Get() {
   vars := c.ParsePath()
-  fmt.Printf("VARS: %q\n", vars)
+  
   name, ok := vars["name"]
   if ok {
     c.SendResponse(fmt.Sprintf("Hello %s!", name))
