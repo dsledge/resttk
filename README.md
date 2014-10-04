@@ -15,6 +15,9 @@ go test
 ```
 
 ###Basic Controller Example:
+The base controller will return a 501 status code if the implementing controller 
+does not override the method. The base controller supports the HEAD, OPTIONS, GET, PUT,
+POST, PATCH and DELETE methods.
 ```go
 package main
 
@@ -122,6 +125,7 @@ Calling **POST** method, not implemented
 ```
 
 ###Filter Example:
+Filters will apply during the routing process before hitting the controller. You can chain filters being applied to a Route. Filters must always return a true or false value.
 ```go
 package main
 
