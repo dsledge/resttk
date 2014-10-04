@@ -61,6 +61,66 @@ func main() {
   }
 }
 ```
+Calling GET method, no parameters
+```bash
+-bash-4.2# curl -v http://127.0.0.1:3000/api/v1/hello                                                                                                       
+* About to connect() to 127.0.0.1 port 3000 (#0)
+*   Trying 127.0.0.1...
+* Connected to 127.0.0.1 (127.0.0.1) port 3000 (#0)
+> GET /api/v1/hello HTTP/1.1
+> User-Agent: curl/7.29.0
+> Host: 127.0.0.1:3000
+> Accept: */*
+> 
+< HTTP/1.1 200 OK
+< Content-Type: application/json
+< Date: Sat, 04 Oct 2014 05:22:34 GMT
+< Content-Length: 15
+< 
+"Hello world!"
+* Connection #0 to host 127.0.0.1 left intact
+```
+Calling GET method, with parameters
+```bash
+-bash-4.2# curl -v http://127.0.0.1:3000/api/v1/hello/Jerry
+* About to connect() to 127.0.0.1 port 3000 (#0)
+*   Trying 127.0.0.1...
+* Connected to 127.0.0.1 (127.0.0.1) port 3000 (#0)
+> GET /api/v1/hello/Jerry HTTP/1.1
+> User-Agent: curl/7.29.0
+> Host: 127.0.0.1:3000
+> Accept: */*
+> 
+< HTTP/1.1 200 OK
+< Content-Type: application/json
+< Date: Sat, 04 Oct 2014 05:12:25 GMT
+< Content-Length: 15
+< 
+"Hello Jerry!"
+* Connection #0 to host 127.0.0.1 left intact
+```
+Calling POST method, not implemented
+```bash
+-bash-4.2# curl -vd "Test Data" http://127.0.0.1:3000/api/v1/hello
+* About to connect() to 127.0.0.1 port 3000 (#0)
+*   Trying 127.0.0.1...
+* Connected to 127.0.0.1 (127.0.0.1) port 3000 (#0)
+> POST /api/v1/hello HTTP/1.1
+> User-Agent: curl/7.29.0
+> Host: 127.0.0.1:3000
+> Accept: */*
+> Content-Length: 9
+> Content-Type: application/x-www-form-urlencoded
+> 
+* upload completely sent off: 9 out of 9 bytes
+< HTTP/1.1 501 Not Implemented
+< Date: Sat, 04 Oct 2014 05:18:24 GMT
+< Content-Length: 0
+< Content-Type: text/plain; charset=utf-8
+< 
+* Connection #0 to host 127.0.0.1 left intact
+```
+
 ###Filter Example:
 ###Session Example:
 ###Resource Example:
