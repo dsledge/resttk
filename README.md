@@ -200,7 +200,7 @@ Calling **GET** method, missing required header
 ```
 Calling **GET** method, with required header
 ```bash
--bash-4.2# curl -vH "TOKEN:1234" http://127.0.0.1:3000/api/v1/hello                                         
+-bash-4.2# curl -vH "TOKEN:1234" http://127.0.0.1:3000/api/v1/hello
 * About to connect() to 127.0.0.1 port 3000 (#0)
 *   Trying 127.0.0.1...
 * Connected to 127.0.0.1 (127.0.0.1) port 3000 (#0)
