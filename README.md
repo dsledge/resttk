@@ -61,7 +61,7 @@ func main() {
   }
 }
 ```
-Calling GET method, no parameters
+Calling **GET** method, no parameters
 ```bash
 -bash-4.2# curl -v http://127.0.0.1:3000/api/v1/hello                                                                                                       
 * About to connect() to 127.0.0.1 port 3000 (#0)
@@ -80,7 +80,7 @@ Calling GET method, no parameters
 "Hello world!"
 * Connection #0 to host 127.0.0.1 left intact
 ```
-Calling GET method, with parameters
+Calling **GET** method, with parameters
 ```bash
 -bash-4.2# curl -v http://127.0.0.1:3000/api/v1/hello/Jerry
 * About to connect() to 127.0.0.1 port 3000 (#0)
@@ -99,7 +99,7 @@ Calling GET method, with parameters
 "Hello Jerry!"
 * Connection #0 to host 127.0.0.1 left intact
 ```
-Calling POST method, not implemented
+Calling **POST** method, not implemented
 ```bash
 -bash-4.2# curl -vd "Test Data" http://127.0.0.1:3000/api/v1/hello
 * About to connect() to 127.0.0.1 port 3000 (#0)
