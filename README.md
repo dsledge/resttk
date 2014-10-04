@@ -63,7 +63,7 @@ func main() {
 ```
 Calling **GET** method, no parameters
 ```bash
--bash-4.2# curl -v http://127.0.0.1:3000/api/v1/hello                                                                                                       
+-bash-4.2# curl -v http://127.0.0.1:3000/api/v1/hello
 * About to connect() to 127.0.0.1 port 3000 (#0)
 *   Trying 127.0.0.1...
 * Connected to 127.0.0.1 (127.0.0.1) port 3000 (#0)
