@@ -7,15 +7,20 @@ import (
 )
 
 type Server struct {
-	Addr   string
-	Port   string
-	Cert   string
-	Key    string
-	SSL    bool
-	Routes *Router
+	Addr   				string
+	Port   				string
+	Cert   				string
+	Key    				string
+	SSL    				bool
+	Routes 				*Router
+	StaticPrefix 	string
+	StaticDir 		string
 }
 
 func (s *Server) Run() error {
+	if s.StaticDir != "" {
+		http.Handle(s.StaticPrefix, http.StripPrefix(s.StaticPrefix, http.FileServer(http.Dir(s.StaticDir))))
+	}
 	http.Handle("/", s.Routes)
 
 	if s.SSL {
